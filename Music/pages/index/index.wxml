@@ -1,0 +1,76 @@
+<view class="body">
+  <search isShow="false"></search>
+  <swiper indicator-dots="true" autoplay="false" interval="2000" duration="500" circular="true" easing-function="easeInOutCubic">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.imageUrl}}"></image>
+        <text style="background: {{item.titleColor}};">{{ item.typeTitle}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="icon_banner">
+    <scroll-view scroll-x="true">
+      <ul>
+        <li>
+          <view class="image_box">
+            <image src="/image/list_icon/日历.png"></image>
+          </view>
+          <text>每日推荐</text>
+        </li>
+        <li>
+          <view class="image_box">
+            <image src="/image/list_icon/收音机.png"></image>
+          </view>
+          <text>私人FM</text>
+        </li>
+        <li>
+          <view class="image_box">
+            <image src="/image/list_icon/歌单.png"></image>
+          </view>
+          <text>歌单</text>
+        </li>
+        <li>
+          <view class="image_box">
+            <image src="/image/list_icon/排行榜.png"></image>
+          </view>
+          <text>排行榜</text>
+        </li>
+        <li>
+          <view class="image_box">
+            <image src="/image/list_icon/专辑.png"></image>
+          </view>
+          <text>专辑</text>
+        </li>
+        <li>
+          <view class="image_box">
+            <image src="/image/list_icon/直播.png"></image>
+          </view>
+          <text>直播</text>
+        </li>
+        <li>
+          <view class="image_box">
+            <image src="/image/list_icon/游戏.png"></image>
+          </view>
+          <text>游戏</text>
+        </li>
+      </ul>
+    </scroll-view>
+  </view>
+  <view class="recommend_list">
+    <view class="recommend_list_head">
+      <text>推荐歌单</text>
+      <text class="recommend_list_head_more">更多></text>
+    </view>
+    <view class="recommend_list_banner">
+      <scroll-view scroll-x="true">
+        <ul>
+          <li wx:for="{{recommend_list}}" wx:key="id" wx:for-item="itemName">
+            <image src="{{itemName.picUrl}}"></image>
+            <text>{{itemName.name}}</text>
+          </li>
+        </ul>
+      </scroll-view>
+    </view>
+  </view>
+  <footer></footer>
+</view>

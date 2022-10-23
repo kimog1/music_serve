@@ -1,0 +1,44 @@
+<view class="body" style="background-image: url({{song.al.picUrl}});">
+  <!-- 占位盒子 -->
+  <view style="height: {{statusBarTop+'px'}};width: 100%;"></view>
+  <!-- 歌名、歌手 -->
+  <view class="head">
+    <view class="head_left">
+      <text class="iconfont icon-xiangxia" bindtap="back"></text>
+    </view>
+    <view class="head_right">
+      <text>{{song.name}}
+      </text>
+      <text wx:for="{{song.ar}}" wx:key="index" wx:for-item="item" class="singer">{{item.name}} </text>
+    </view>
+  </view>
+  <view class="main">
+    <view class="circle"></view>
+    <image class="needle {{isPlay && 'needleRotate'}}" src="/image/play_music/needle.png"></image>
+    <view class="discContainer ">
+      <image class="pic  {{isPlay &&'discAnimation'}}" src="{{song.al.picUrl}}"></image>
+      <image class="disc" src="/image/play_music/coverall.png"></image>
+    </view>
+
+  </view>
+  <view class="foot">
+    <!-- 进度条 -->
+    <view class="progress-box">
+      <text>{{currentTime}}</text>
+      <view class="process">
+        <slider bindchange="changed" min="0" max="{{max}}" bindchanging="changing" value="{{value}}" block-size="12" ></slider>
+      </view>
+      <text>{{totalTime}}</text>
+    </view>
+    <!-- 播放、切歌 -->
+    <view class="controlList">
+      <text class="iconfont icon-suiji"></text>
+      <text class="iconfont icon-shangyishoushangyige" bindtap="checkMusic" id="pre"></text>
+      <text class="iconfont icon-zanting big" wx:if="{{isPlay}}" bindtap="controlPlay"></text>
+      <text class="iconfont icon-bofang1 big" wx:else bindtap="controlPlay"></text>
+      <text class="iconfont icon-xiayigexiayishou" bindtap="checkMusic" id="next"></text>
+      <text class="iconfont icon-gedan"></text>
+    </view>
+  </view>
+
+</view>

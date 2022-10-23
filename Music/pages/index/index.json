@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search": "../../components/search/search",
+    "footer": "../../components//footer/footer"
+  },
+  "navigationStyle": "custom"
+}

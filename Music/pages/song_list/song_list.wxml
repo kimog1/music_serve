@@ -1,0 +1,60 @@
+<view class="body">
+  <view class="head_bg">
+    <view class="bg" style="background-image: url({{songs[0].al.picUrl}});">
+    </view>
+  </view>
+  <view class="head">
+    <image src="{{coverImgUrl}}"></image>
+    <text>我喜欢的音乐</text>
+    <view class="head_userinfo">
+      <image src="{{userinfo.userPic}}"></image>
+      <text>{{userinfo.userName}}＞</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="content_play">
+      <view class="content_left">
+        <image src="/image/songList/播放.png"></image>
+        <text>播放全部</text>
+        <text class="song_num">({{songs.length}})</text>
+      </view>
+      <view class="content_right">
+        <image src="/image/songList/添加音乐.png"></image>
+        <image src="/image/songList/下载.png"></image>
+        <image src="/image/songList/多选框.png"></image>
+      </view>
+    </view>
+    <scroll-view scroll-y="true" style="height: {{scrollHeight}}rpx;">
+      <view class="content_main" wx:for="{{songs}}" wx:key="index" wx:for-item="item">
+        <text class="song_index">{{index + 1}}</text>
+        <view class="song_name" bindtap="playMusic" data-item="{{item}}">
+          <text class="song_name_text">{{item.name}}</text>
+          <view class="singer_name">
+            <text wx:for="{{item.ar}}" wx:key="index" wx:for-item="item_ar">{{item_ar.name}} </text>
+            <text> - {{item.al.name}}</text>
+          </view>
+        </view>
+        <view class="song_icon">
+          <image src="/image/songList/播放MV.png"></image>
+          <image src="/image/songList/Android更多.png"></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="foot">
+    <view class="foot_left">
+      <view class="foot_left_image">
+        <image src="{{currentSong.picUrl}}"></image>
+      </view>
+
+      <view class="foot_left_text">
+        <text>{{currentSong.name}}</text>
+        <text> - {{currentSong.singer}}</text>
+      </view>
+    </view>
+    <view class="content_right">
+      <image src="/image/songList/播放 (1).png"></image>
+      <image src="/image/songList/歌单.png"></image>
+    </view>
+  </view>
+</view>

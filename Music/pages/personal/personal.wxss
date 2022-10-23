@@ -1,0 +1,77 @@
+.image_box {
+  height: 340rpx;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 30rpx 5%;
+}
+
+.image_box image {
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #f7f2f1;
+  border-radius: 50%;
+}
+
+.login {
+  position: absolute;
+  background-color: white;
+  color: black;
+  height: 250rpx;
+  width: 90%;
+  border-radius: 30rpx;
+  top: 80rpx;
+  z-index: -1;
+}
+
+.login text {
+  line-height: 300rpx;
+  font-size: 50rpx;
+}
+.love_music{
+  display: flex;
+  background-color: white;
+  margin: 0 5%;
+  padding: 30rpx;
+  border-radius: 30rpx;
+}
+.love_music_image{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #a5a5a5;
+  text-align: center;
+  line-height: 125rpx;
+  border-radius: 30rpx;
+}
+.love_music_image image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.love_music_text{
+  padding: 10rpx 30rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  flex: 1;
+}
+.love_music_text text{
+  display: block;
+}
+.love_music_mode{
+  height: 50rpx;
+  width: 100rpx;
+  border-radius: 50rpx;
+  padding: 10rpx 15rpx 10rpx 60rpx;
+  margin: auto 0;
+  border: 1rpx solid #a5a5a5;
+  position: relative;
+}
+.love_music_mode image{
+  position: absolute;
+  width: 40rpx;
+  height:40rpx;
+  top: 17rpx;
+  left: 17rpx;
+}
+.love_music_mode text{
+  font-size: 24rpx;
+}

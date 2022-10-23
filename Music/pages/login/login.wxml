@@ -1,0 +1,15 @@
+<view>
+  <text class="container">欢迎回来！</text>
+  <view>
+    <view class="phone">
+      <TEXT>手机号码</TEXT>
+      <input type="number" placeholder="请输入手机号码" data-type="phone" id="phone" bindinput="handleInput" />
+    </view>
+    <view class="phone">
+      <TEXT>密码</TEXT>
+      <input type="password" placeholder="请输入密码" data-type="password" id="password" bindinput="handleInput" />
+    </view>
+  </view>
+
+  <button class="confirm-btn" bindtap="login">登录</button>
+</view>

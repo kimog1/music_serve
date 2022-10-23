@@ -1,0 +1,13 @@
+<view style="background-color: #fff;">
+  <view style="height: {{statusBarTop+'px'}};"></view>
+  <view class="title">
+    <text class="iconfont icon-xiangzuo" wx:if="{{isShow=='true'}}" bindtap="toBack"></text>
+    <text>{{titleName}}</text>
+  </view>
+  <view class="search">
+    <view class="search_input" bindtap="toSearch">
+      <text class="iconfont icon-sousuo"></text>
+      <input type="text" placeholder="搜索歌曲" bindconfirm='goSearch' confirm-type="search" value="{{keyword?keyword:searchKeyword}}" />
+    </view>
+  </view>
+</view>

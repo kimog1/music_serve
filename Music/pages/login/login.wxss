@@ -1,0 +1,18 @@
+/* pages/mine/mine.wxss */
+.container {
+  font-size: 50rpx;
+  display: block;
+  margin: 100rpx 0 100rpx 50rpx;
+}
+
+.phone {
+  background-color: #f8f6fc;
+  margin: 50rpx 100rpx;
+  border-radius: 30rpx;
+  padding: 20rpx 50rpx;
+}
+
+button {
+  background-color: #cc4439;
+  color: #ffffff;
+}

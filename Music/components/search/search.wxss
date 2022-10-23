@@ -1,0 +1,41 @@
+/* components/search.wxss */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  font-weight: 600;
+  padding: 10rpx;
+}
+
+.icon-xiangzuo {
+  position: absolute;
+  left: 30rpx;
+  font-size: 40rpx;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  height: 70rpx;
+  padding: 30rpx;
+}
+
+.search_input {
+  background-color: #f8f8f8;
+  width: 90%;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.icon-sousuo {
+  font-size: 36rpx;
+  padding: 0 30rpx;
+}
+
+.search_text {
+  font-size: 32rpx;
+  color: rgb(156, 154, 154);
+  line-height: 70rpx;
+}

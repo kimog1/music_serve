@@ -1,0 +1,16 @@
+<view class="foot">
+  <view class="foot_left" bindtap="toPlayMusic">
+    <view class="foot_left_image">
+      <image src="{{currentSong.al.picUrl}}"></image>
+    </view>
+    <view class="foot_left_text">
+      <text>{{currentSong.name}} - </text>
+      <text wx:for="{{currentSong.ar}}" wx:key="index" wx:for-item="item">{{item.name}} </text>
+    </view>
+  </view>
+  <view class="content_right">
+    <text class="iconfont icon-zanting1" style="color: red;" wx:if="{{isPlay}}" bindtap="controlPlay"></text>
+    <text class="iconfont icon-gf-playCircle" style="color: red;" wx:else bindtap="controlPlay"></text>
+    <text class="iconfont icon-gedan"></text>
+  </view>
+</view>

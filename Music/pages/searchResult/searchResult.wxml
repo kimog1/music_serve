@@ -1,0 +1,14 @@
+<view>
+  <search isShow="true" bind:searchKeyword="getSearchResult"></search>
+  <view>
+    <view class="resultList" wx:for="{{songs}}" wx:key="{{songs.id}}" wx:for-item="item" bindtap="playMusic" data-item="{{item}}">
+      <view class="resultList_text">
+        <text style="font-size: 36rpx;font-weight: 600;">{{item.name}}
+        </text>
+        <text style="color:#5e7ead;" wx:for="{{item.ar}}" wx:key="index" wx:for-item="item_ar">{{item_ar.name}} </text>
+        <text style="color:#a7a7a7;"> - {{item.al.name}}</text>
+      </view>
+      <text class="iconfont icon-bofang1"></text>
+    </view>
+  </view>
+</view>

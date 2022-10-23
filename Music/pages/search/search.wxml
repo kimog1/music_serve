@@ -1,0 +1,29 @@
+<view>
+  <search isShow="true" keyword="{{keyword}}"></search>
+  <view class="history">
+    <view class="history_head">
+      <text>历史记录</text>
+      <text class="iconfont icon-lajitong" bindtap="clearHistory"></text>
+    </view>
+    <view class="history_main">
+      <view wx:for="{{historySearch}}" wx:key="index" wx:for-item="item">
+        <view bindtap="goSearch" data-item="{{item}}">{{item}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="topList">
+    <view class="topList_head">
+      <text>热搜榜</text>
+    </view>
+    <view class="topList_main" wx:for="{{hotList}}" wx:key="index" wx:for-item="item" bindtap="goSearch" data-item="{{item}}">
+      <view class="topList_main_num">{{index+1}}</view>
+      <view class="topList_main_text">
+        <text style="font-weight: 550;">{{item.searchWord}}
+        </text>
+        <text style="font-size: 26rpx;">{{item.content}}</text>
+      </view>
+      <text style="font-size: 26rpx;">{{item.score}}</text>
+    </view>
+
+  </view>
+</view>

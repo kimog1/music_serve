@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/login/login",
+    "pages/song_list/song_list",
+    "pages/play_music/play_music",
+    "pages/search/search",
+    "pages/searchResult/searchResult"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "网易云",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#777777",
+    "selectedColor": "#be351b",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/image/list_bar/home.png",
+      "selectedIconPath": "/image/list_bar/in_home.png"
+    },
+    {
+      "pagePath": "pages/personal/personal",
+      "text": "我的",
+      "iconPath": "/image/list_bar/my.png",
+      "selectedIconPath": "/image/list_bar/in_my.png"
+    }]
+  },
+  "requiredBackgroundModes": ["audio"],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

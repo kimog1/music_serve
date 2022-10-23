@@ -1,0 +1,38 @@
+/* components/footer/footer.wxss */
+.foot {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  background-color: white;
+}
+
+.foot_left {
+  display: flex;
+  align-items: center;
+  width: 600rpx;
+}
+
+.foot_left_image {
+  margin: 0rpx 50rpx;
+  border-radius: 100rpx;
+}
+
+.foot_left_image image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.foot_left_text {
+  height: 45rpx;
+  overflow: hidden;
+}
+
+.content_right text {
+  font-size: 50rpx;
+  padding: 0 10rpx;
+}
